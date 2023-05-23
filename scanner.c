@@ -87,10 +87,10 @@ static void skipWhitespace() {
             if (peekNext() == '/') {
                 // A comment goes until the end of the line.
                 while (peek() != '\n' && !isAtEnd()) advance();
-            }
-            else {
+            } else {
                 return;
             }
+            break;
         default:
             return;
         }

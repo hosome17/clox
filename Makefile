@@ -1,9 +1,13 @@
-TARGET = clox
+TARGET_NAME = clox
 LIBS = -lm
 CC = gcc
 CFLAGS = -g -Wall
+BIN_PATH = bin
+TEST_PATH = test/test.lox
 
-.PHONY: default all clean
+TARGET = $(BIN_PATH)/$(TARGET_NAME)
+
+.PHONY: default all clean test
 
 default: $(TARGET)
 all: default
@@ -18,6 +22,10 @@ HEADERS = $(wildcard *.h)
 
 $(TARGET): $(OBJECTS)
 	$(CC) $(OBJECTS) -Wall $(LIBS) -o $@
+	-rm -f *.o
+
+test:
+	$(TARGET) $(TEST_PATH)
 
 clean:
 	-rm -f *.o
