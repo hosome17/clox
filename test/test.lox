@@ -4,4 +4,12 @@
 
 // "abc" == "abc"
 
-"a" + "bc"
+// "a" + "bc"
+
+// print 2 * (1 + 3);
+// print "hello world";
+
+var breakfast;
+var beverage = "milk";
+breakfast = "bread with " + beverage;
+print breakfast;
