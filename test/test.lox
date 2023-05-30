@@ -14,10 +14,51 @@
 // breakfast = "bread with " + beverage;
 // print breakfast;
 
-var a = "global";
-{
-    print a; // global
-    var a = "local";
-    print a; // local
+// var a = "global";
+// {
+//     print a; // global
+//     var a = "local";
+//     print a; // local
+// }
+// print a; // global
+
+// if (true) {
+//     print "true";
+// } else {
+//     print "false";
+// }
+
+// if (false) {
+//     print "false";
+// } else {
+//     print "true";
+// }
+
+// if (false and 2 > 1) {
+//     print "a";
+// } else {
+//     print "a'";
+// }
+
+// if (true or 2 >= 1) {
+//     print "b";
+// } else {
+//     print "b'";
+// }
+
+// if (true and 2 > 1) {
+//     print "c";
+// } else {
+//     print "c'";
+// }
+
+// var i = 0;
+
+// while (i < 5) {
+//     print i;
+//     i = i + 1;
+// }
+
+for (var i = 0; i < 5; i = i + 1) {
+    print i;
 }
-print a; // global
