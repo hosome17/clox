@@ -78,11 +78,42 @@
 // a();
 
 
-fun fib(n) {
-  if (n < 2) return n;
-  return fib(n - 2) + fib(n - 1);
+// fun fib(n) {
+//   if (n < 2) return n;
+//   return fib(n - 2) + fib(n - 1);
+// }
+
+// var start = clock();
+// print fib(15);
+// print clock() - start;
+
+// var x = "global";
+// fun outer() {
+//   var x = "outer";
+//   fun inner() {
+//     print x;
+//   }
+//   inner();
+// }
+// outer();
+
+// fun outer() {
+//   var x = "outside";
+//   fun inner() {
+//     print x;
+//   }
+//   inner();
+// }
+// outer();
+
+fun outer() {
+  var x = "outside";
+  fun inner() {
+    print x;
+  }
+
+  return inner;
 }
 
-var start = clock();
-print fib(15);
-print clock() - start;
+var closure = outer();
+closure();
