@@ -106,14 +106,27 @@
 // }
 // outer();
 
-fun outer() {
-  var x = "outside";
-  fun inner() {
-    print x;
-  }
+// fun outer() {
+//   var x = "outside";
+//   fun inner() {
+//     print x;
+//   }
 
-  return inner;
-}
+//   return inner;
+// }
 
-var closure = outer();
-closure();
+// var closure = outer();
+// closure();
+
+// class Brioche {}
+// print Brioche;
+// print Brioche();
+
+class Pair {}
+
+var pair = Pair();
+pair.first = 1;
+pair.second = 2;
+print pair.first + pair.second; // 3.
+print hasField(pair, "first"); // true.
+print hasField(pair, "third"); // false.
